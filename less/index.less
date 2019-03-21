@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,36 +92,228 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
+.main-container {
+	@grey : rgb(199, 195, 195);
+ @headercolor:darkblue;
+ @phone:(max-width: 515px);
+
+
+	.maincolor {
+		background-color: rgb(241, 238, 238);
+	}
+
+	.myflex() {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.headernav {
+		.myflex;
+
+		a {
+			padding: 50px;
+			color:brown;
+			text-decoration: none;
+		}
+	}
+
+	.intro {
+		.maincolor();
+		
+		margin: 20px;
+		padding-bottom: 20px;
+		@media @phone {
+			background-color: gold;
+		  }
+
+		h1 {
+			font-size: 170%;
+			color:@headercolor;
+		}
+
+		h3 {
+			font-size: 120%;
+			color: @headercolor;
+		}
+
+		.whatido {
+			border-top: 1px solid @grey;
+			padding: 20px;
+		}
+
+		.button {
+			background-color: gray;
+			width: 10%;
+			height: 30px;
+			margin-left: 20px;
+			text-align: center;
+			padding: 5px;
+			color: white;
+			@media @phone {
+				background-color: rgb(144, 132, 218);
+				width:30%;
+				text-align:center; 
+			  }
+		}
+	}
+
+	.flexforboth {
+		margin-left: 20px;
+		margin-right: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		@media @phone {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.firstsection {
+			width: 50%; //border:1px solid black;
+			text-align: justify;
+			margin-right: 20px;
+
+			
+
+		}
+
+		.secondsection {
+			margin-left: 20px;
+			width: 50%;
+			text-align: left;
+
+			.zero {
+				height: 10%;
+				font-size: 125%;
+				color: @headercolor;
+			}
+
+			.first {
+				border: 1px solid @grey;
+				height: 15%;
+				padding: 10px;
+			}
+
+			.second {
+				border: 1px solid @grey ;
+				height: 15%;
+				padding: 10px;
+			}
+
+			.third {
+				border: 1px solid @grey;
+				height: 15%;
+				padding: 10px;
+			}
+
+			.fourth {
+				border: 1px solid @grey;
+				height: 15%;
+				padding: 10px;
+			}
+
+			.fifth {
+				border: 1px solid @grey ;
+				height: 15%;
+				padding: 10px;
+			}
+
+		}
+
+		//second section
+	}
+
+	h2 {
+		font-size: 150%;
+		color: @headercolor;
+	}
+
+	.worktable {
+		width: 97%;
+		text-align: left;
+		margin: 20px;
+		padding-bottom: 20px;
+
+		th {
+			font-weight: bold;
+			background-color: #ffffff;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.wrap-every(@n) {
+			@t: ~":nth-child(@{n}n + 1)";
+
+			&@{t} {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				background-color: #fff2f2;
+			}
+		}
+
+		tr {
+			.wrap-every(2);
+		}
+	}
+
+	
+}
+
+//main-container
